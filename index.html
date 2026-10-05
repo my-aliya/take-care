@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Aliya 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #e86f98;
+    --dark-pink: #bd4f76;
+    --text: #49343e;
+    --muted: #806c75;
+    --white: rgba(255,255,255,.72);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+
+    background:
+        radial-gradient(circle at 10% 10%, #ffdbe8 0, transparent 30%),
+        radial-gradient(circle at 90% 20%, #e9dcff 0, transparent 28%),
+        radial-gradient(circle at 50% 100%, #ffe4ef 0, transparent 35%),
+        #fff8fb;
+
+    overflow-x: hidden;
+}
+
+/* ---------------- FLOATING DECORATIONS ---------------- */
+
+.decor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatUp linear infinite;
+    opacity: .55;
+}
+
+.decor:nth-child(1) {
+    left: 8%;
+    bottom: -30px;
+    animation-duration: 10s;
+}
+
+.decor:nth-child(2) {
+    left: 25%;
+    bottom: -40px;
+    animation-duration: 13s;
+    animation-delay: 2s;
+}
+
+.decor:nth-child(3) {
+    left: 60%;
+    bottom: -30px;
+    animation-duration: 11s;
+    animation-delay: 4s;
+}
+
+.decor:nth-child(4) {
+    left: 85%;
+    bottom: -30px;
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .55;
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+/* ---------------- MAIN ---------------- */
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: min(92%, 720px);
+    margin: auto;
+    padding: 35px 0 50px;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+    text-align: center;
+    padding: 30px 10px 25px;
+}
+
+.mini {
+    font-size: .78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ad8291;
+    margin-bottom: 15px;
+}
+
+.flower {
+    font-size: 62px;
+    display: inline-block;
+    animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%,100% {
+        transform: scale(1) rotate(-3deg);
+    }
+
+    50% {
+        transform: scale(1.08) rotate(3deg);
+    }
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: .95;
+    color: #bd5679;
+    margin-top: 12px;
+}
+
+.hero h1 span {
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 480px;
+    margin: 20px auto 0;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* ---------------- GLASS CARD ---------------- */
+
+.card {
+    background: var(--white);
+    border: 1px solid rgba(255,255,255,.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 30px;
+    padding: 27px;
+
+    margin-top: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(180,95,125,.10),
+        inset 0 1px rgba(255,255,255,.8);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* ---------------- LETTER ---------------- */
+
+.letter {
+    position: relative;
+    overflow: hidden;
+}
+
+.letter::after {
+    content: "♡";
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 70px;
+    color: rgba(232,111,152,.07);
+}
+
+.letter p {
+    line-height: 1.9;
+    color: #66515a;
+    font-size: .96rem;
+}
+
+.signature {
+    margin-top: 18px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: var(--dark-pink);
+    font-size: 1.1rem;
+}
+
+/* ---------------- CARE GRID ---------------- */
+
+.care-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.care {
+    border: 0;
+    padding: 18px 15px;
+    border-radius: 21px;
+
+    background: #fff7fa;
+    border: 1px solid #f8e3eb;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.care:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(190,80,120,.10);
+}
+
+.care.done {
+    background: #f7f0fa;
+    opacity: .65;
+}
+
+.care .icon {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.care strong {
+    display: block;
+    font-size: .9rem;
+}
+
+.care small {
+    display: block;
+    margin-top: 5px;
+    color: #947e87;
+    line-height: 1.4;
+}
+
+/* ---------------- MEDICINE ---------------- */
+
+.medicine {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px;
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #f7f0ff
+    );
+}
+
+.med-icon {
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 17px;
+    background: white;
+
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.medicine strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #98516c;
+}
+
+.medicine p {
+    font-size: .84rem;
+    line-height: 1.5;
+    color: #806c75;
+}
+
+/* ---------------- WATER ---------------- */
+
+.water {
+    text-align: center;
+}
+
+.water-count {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ca6286;
+}
+
+.water-label {
+    color: #8b737d;
+    font-size: .85rem;
+}
+
+.water-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.water-buttons button {
+    border: 0;
+    padding: 10px 18px;
+    border-radius: 14px;
+    background: #fff0f5;
+    color: #a64e70;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.water-buttons button:hover {
+    background: #fbdce8;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.main-btn {
+    width: 100%;
+    border: 0;
+
+    padding: 17px;
+    margin-top: 20px;
+
+    border-radius: 19px;
+
+    background: linear-gradient(
+        135deg,
+        #e86f98,
+        #c76de0
+    );
+
+    color: white;
+
+    font-size: .95rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 30px rgba(208,90,140,.25);
+
+    transition: .25s;
+}
+
+.main-btn:hover {
+    transform: translateY(-2px);
+}
+
+.main-btn:active {
+    transform: scale(.98);
+}
+
+/* ---------------- SECRET MESSAGE ---------------- */
+
+.secret {
+    display: none;
+    margin-top: 18px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 20px;
+    background: #fff0f6;
+
+    color: #92516a;
+    line-height: 1.8;
+
+    animation: appear .5s ease;
+}
+
+.secret.show {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+
+    color: #aa909a;
+    font-size: .75rem;
+}
+
+.heart-line {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width: 520px) {
+
+    .container {
+        width: 92%;
+        padding-top: 20px;
+    }
+
+    .card {
+        padding: 21px;
+        border-radius: 25px;
+    }
+
+    .care-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating decorations -->
+<div class="decor">💗</div>
+<div class="decor">🌸</div>
+<div class="decor">♡</div>
+<div class="decor">🌷</div>
+
+
+<div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="mini">
+            a little page for
+        </div>
+
+        <div class="flower">🌷</div>
+
+        <h1>
+            Aliya<span>♡</span>
+        </h1>
+
+        <p>
+            Since you're not feeling well today,
+            I made you a tiny reminder that
+            you need to take care of yourself. 🥺
+        </p>
+
+    </section>
+
+
+    <!-- PERSONAL LETTER -->
+    <section class="card letter">
+
+        <div class="card-title">
+            💌 A little reminder for you
+        </div>
+
+        <p>
+            Hey Aliya,
+        </p>
+
+        <br>
+
+        <p>
+            I know being sick isn't fun, but please don't
+            forget to look after yourself properly.
+            Take your medicines on time, drink some water,
+            eat something, and most importantly...
+            <b>get some proper rest.</b>
+        </p>
+
+        <br>
+
+        <p>
+            You don't have to do anything right now.
+            Just focus on feeling better. 🌷
+        </p>
+
+        <div class="signature">
+            — someone who wants you to feel better ♡
+        </div>
+
+    </section>
+
+
+    <!-- CARE CHECKLIST -->
+    <section class="card">
+
+        <div class="card-title">
+            🌸 Today's little checklist
+        </div>
+
+        <div class="care-grid">
+
+            <button class="care" onclick="complete(this)">
+                <div class="icon">💊</div>
+                <strong>Medicine</strong>
+                <small>Take it according to your prescribed schedule.</small>
+            </button>
+
+            <button class="care" onclick="complete(this)">
+                <div class="icon">💧</div>
+                <strong>Water</strong>
+                <small>Keep yourself hydrated.</small>
+            </button>
+
+            <button class="care" onclick="complete(this)">
+                <div class="icon">🍲</div>
+                <strong>Eat</strong>
+                <small>Don't skip your meals.</small>
+            </button>
+
+            <button class="care" onclick="complete(this)">
+                <div class="icon">🛌</div>
+                <strong>Rest</strong>
+                <small>Give your body time to recover.</small>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEDICINE -->
+    <section class="card">
+
+        <div class="card-title">
+            💊 Important
+        </div>
+
+        <div class="medicine">
+
+            <div class="med-icon">
+                💗
+            </div>
+
+            <div>
+                <strong>Medicine reminder</strong>
+
+                <p>
+                    Please don't forget your medicine.
+                    Follow the instructions and timing
+                    given by your doctor or pharmacist.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WATER COUNTER -->
+    <section class="card water">
+
+        <div class="card-title">
+            💧 Tiny hydration reminder
+        </div>
+
+        <div class="water-count" id="waterCount">
+            0
+        </div>
+
+        <div class="water-label">
+            glasses logged today
+        </div>
+
+        <div class="water-buttons">
+
+            <button onclick="addWater()">
+                + Water 💧
+            </button>
+
+            <button onclick="resetWater()">
+                Reset
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL MESSAGE -->
+    <section class="card">
+
+        <div class="card-title">
+            🥺 One last thing...
+        </div>
+
+        <p style="
+            text-align:center;
+            line-height:1.8;
+            color:#705b64;
+        ">
+            You don't get to say
+            <b>"I'm fine"</b>
+            and then forget to take care of yourself. 😤
+            <br><br>
+
+            So please...
+            <br>
+
+            <b style="color:#d05d83;">
+                medicine ✓ &nbsp; water ✓ &nbsp; rest ✓
+            </b>
+        </p>
+
+        <button class="main-btn" onclick="promise()">
+            💗 I promise I'll take care of myself
+        </button>
+
+        <div class="secret" id="secret">
+
+            Okayyy, promise accepted. 🥹💗
+
+            <br>
+
+            Now go drink some water,
+            take your medicine if it's time,
+            put your phone away for a bit...
+
+            <br><br>
+
+            <b>and get some rest, Aliya. 🌷</b>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        Made especially for Aliya ♡
+
+        <div class="heart-line">
+            🌷 💗 🌸
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+/* CARE CHECKLIST */
+
+function complete(element) {
+
+    element.classList.toggle("done");
+
+    if (element.classList.contains("done")) {
+
+        const icon = element.querySelector(".icon");
+
+        if (!icon.dataset.original) {
+            icon.dataset.original = icon.textContent;
+        }
+
+        icon.textContent = "✓";
+
+    } else {
+
+        const icon = element.querySelector(".icon");
+
+        icon.textContent = icon.dataset.original;
+
+    }
+}
+
+
+/* WATER COUNTER */
+
+let water = 0;
+
+function addWater() {
+
+    water++;
+
+    document.getElementById("waterCount").textContent = water;
+
+}
+
+function resetWater() {
+
+    water = 0;
+
+    document.getElementById("waterCount").textContent = water;
+
+}
+
+
+/* PROMISE BUTTON */
+
+function promise() {
+
+    const secret = document.getElementById("secret");
+    const button = document.querySelector(".main-btn");
+
+    secret.classList.toggle("show");
+
+    if (secret.classList.contains("show")) {
+
+        button.textContent = "🌸 Promise received ♡";
+
+    } else {
+
+        button.textContent =
+            "💗 I promise I'll take care of myself";
+
+    }
+
+}
+
+</script>
+
+</body>
+          </html>
